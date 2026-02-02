@@ -25,3 +25,10 @@ for answer in chosen_word:
         print("정답")
     else:
         print("오답")
+
+# 일반 for 문
+for i in range(len(chosen_word)):
+    if chosen_word[i] == guess:
+        print("정답")
+    else:
+        print("오답")
