@@ -339,19 +339,64 @@ add_numbers3(10, hello)를 호출하면
 #     dict_list[name] = phone_number
 # print(f"입력 받은 연락처는 {dict_list}입니다.")
 
-numbers1 = []
-last_num = int(input("숫자 몇 까지 입력하시겠습니까? >>> "))
-def add_numbers1(n):
-    for i in range(1, n+1):
-        numbers1.append(i)
-    print(numbers1)
+# last_num = int(input("숫자 몇 까지 입력하시겠습니까? >>> "))
+# def add_numbers1(n):
+#     numbers1 = []
+#     for i in range(1, n + 1):
+#         numbers1.append(i)
+#     print(numbers1)
+#
+# def add_numbers2(n):
+#     numbers2 = []
+#     for i in range(1, n + 1):
+#         numbers2.append(i)
+#     return numbers2
+#
+# add_numbers1(last_num)
+# print(add_numbers2(last_num))
+#
+# hello = ["안", "녕", "하", "세", "여"]
+# def add_numbers3(n, a):
+#     for i in range(n):
+#         a.insert(i, i+1)
+#     print(a)
+#
+# add_numbers3(10, hello)
+#
+# # 아오
+# def add_numbers4(n, temp_list):
+#     numbers4 = []
+#     for i in range(n):
+#         numbers4.append(i+1)
+#     for letter in temp_list:
+#         numbers4.append(letter)
+#     print(numbers4)
 
-def add_numbers2(n):
-    numbers2 = []
-    for i in range(1, n + 1):
-        numbers2.append(i)
-    return numbers2
+"""
+짝수와 홀수의 개수 세기
+list를 입력 받아 짝수와 홀수의 개수를 세는 함수를 작성하시오.
 
-add_numbers1(last_num)
-print(add_numbers2(last_num))
+함수 정의
+함수 이름 : count_even_odd
+매개변수 : list인 numbers(요소는 모두 정수일 것)
 
+함수 호출
+count_even_odd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+실행 예
+짝수의 개수 : 5개
+홀수의 개수 : 5개
+"""
+print()
+def count_even_odd(n):
+    even = 0
+    odd = 0
+    for i in range(len(n)):
+        if n[i] % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+    print(f"짝수의 개수 : {even}개")
+    print(f"홀수의 개수 : {odd}개")
+
+count_even_odd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
