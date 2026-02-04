@@ -4,9 +4,9 @@ class MenuItem:
         self.name = name
         self.cost = cost
         self.ingredients = {
-            "water": water,
-            "milk": milk,
-            "coffee": coffee,
+            "물": water,
+            "우유": milk,
+            "커피": coffee,
         }
 
 
@@ -14,9 +14,9 @@ class Menu:
     """음료 메뉴를 모델링합니다."""
     def __init__(self):
         self.menu = [
-            MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.5),
-            MenuItem(name="espresso", water=50, milk=0, coffee=18, cost=1.5),
-            MenuItem(name="cappuccino", water=250, milk=50, coffee=24, cost=3),
+            MenuItem(name="라떼", water=200, milk=150, coffee=24, cost=2.5),
+            MenuItem(name="에스프레소", water=50, milk=0, coffee=18, cost=1.5),
+            MenuItem(name="카푸치노", water=250, milk=50, coffee=24, cost=3),
             MenuItem(name="카라멜마키아토", water=200, milk=60, coffee=26, cost=4),
         ]
 
@@ -33,3 +33,4 @@ class Menu:
             if item.name == order_name:
                 return item
         print("죄송합니다. 해당 아이템은 이용할 수 없습니다.")
+        return None
